@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>StingCloud — Your One-Stop Digital Power House</title>
+  <meta name="description" content="StingCloud delivers blazing-fast web development, premium hosting, VPS, bot hosting, and software solutions with 99.99% uptime. Build smarter, scale faster." />
+  <meta name="keywords" content="web development, VPS hosting, bot hosting, software development, cloud hosting, SEO, StingCloud" />
+  <meta property="og:title" content="StingCloud — Your One-Stop Digital Power House" />
+  <meta property="og:description" content="Everything your business needs to go online — web dev, hosting, VPS, bots, and software. Built for speed. Designed to impress." />
+  <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ============================================================ NAV ============================================================ -->
+  <nav class="navbar" id="navbar" role="navigation" aria-label="Main navigation">
+    <div class="nav-container">
+      <a href="#home" class="nav-logo" aria-label="StingCloud Home">
+        <div class="logo-icon">
+          <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M32 16c0-6.627-5.373-12-12-12S8 9.373 8 16c-3.314 0-6 2.686-6 6s2.686 6 6 6h24c3.314 0 6-2.686 6-6s-2.686-6-6-6z" fill="url(#cloud-grad)"/>
+            <path d="M22 14l-6 10h5l-2 8 8-12h-5l2-6z" fill="url(#bolt-grad)"/>
+            <defs>
+              <linearGradient id="cloud-grad" x1="2" y1="4" x2="38" y2="28" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#38bdf8"/>
+                <stop offset="1" stop-color="#7c3aed"/>
+              </linearGradient>
+              <linearGradient id="bolt-grad" x1="14" y1="14" x2="24" y2="32" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#ffffff"/>
+                <stop offset="1" stop-color="#bfdbfe"/>
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+        <span class="logo-text">Sting<span class="logo-accent">Cloud</span></span>
+      </a>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="navMenu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <ul class="nav-links" id="navMenu" role="list">
+        <li><a href="#services" class="nav-link">Services</a></li>
+        <li><a href="#why-us" class="nav-link">Why Us</a></li>
+        <li><a href="#process" class="nav-link">How It Works</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+        <li><a href="#contact" class="nav-cta" id="navBuildBtn">Build Now ⚡</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ============================================================ HERO ============================================================ -->
+  <section class="hero" id="home" aria-labelledby="hero-heading">
+    <div class="hero-bg">
+      <div class="hero-orb orb-1" aria-hidden="true"></div>
+      <div class="hero-orb orb-2" aria-hidden="true"></div>
+      <div class="hero-orb orb-3" aria-hidden="true"></div>
+      <div class="grid-overlay" aria-hidden="true"></div>
+      <canvas id="particleCanvas" aria-hidden="true"></canvas>
+    </div>
+
+    <div class="hero-container container">
+      <div class="hero-content">
+        <div class="hero-badge" role="status">
+          <span class="badge-dot" aria-hidden="true"></span>
+          <span>Your Complete Digital &amp; Cloud Partner</span>
+        </div>
+
+        <h1 id="hero-heading" class="hero-title">
+          One Platform For<br />
+          <span class="hero-typing-wrapper"><span class="gradient-text" id="typingText">Web Development</span></span>
+        </h1>
+
+        <p class="hero-subtitle">
+          From blazing-fast websites to bulletproof hosting, smart bots to custom software — StingCloud powers everything your business needs to <strong>grow online</strong>, without the tech headaches.
+        </p>
+
+        <div class="hero-stats" role="list" aria-label="Key statistics">
+          <div class="stat-chip" role="listitem">
+            <span class="stat-number">99.99%</span>
+            <span class="stat-label">Uptime</span>
+          </div>
+          <div class="stat-chip" role="listitem">
+            <span class="stat-number">&lt;2s</span>
+            <span class="stat-label">Load Speed</span>
+          </div>
+          <div class="stat-chip" role="listitem">
+            <span class="stat-number">24/7</span>
+            <span class="stat-label">Support</span>
+          </div>
+          <div class="stat-chip" role="listitem">
+            <span class="stat-number">100%</span>
+            <span class="stat-label">Custom Built</span>
+          </div>
+        </div>
+
+        <div class="hero-actions">
+          <a href="#contact" class="btn-primary" id="heroCtaBtn" aria-label="Start building with StingCloud">
+            <span>Build Now</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          <a href="#services" class="btn-ghost" aria-label="Explore StingCloud services">
+            Explore Services
+          </a>
+        </div>
+
+        <div class="hero-trust" aria-label="Trust indicators">
+          <span class="trust-label">Trusted by</span>
+          <div class="trust-logos" aria-hidden="true">
+            <div class="trust-logo">StartupX</div>
+            <div class="trust-logo">DevCo</div>
+            <div class="trust-logo">NovaTech</div>
+            <div class="trust-logo">PixelBrand</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hero Services Cards (Replaces the Globe) -->
+      <div class="hero-showcase" aria-label="StingCloud Core Services">
+        <div class="showcase-header">
+          <span class="showcase-tag">✦ All-In-One Hub</span>
+          <span class="showcase-status"><span class="pulse-dot"></span> 100% Managed</span>
+        </div>
+        <div class="hero-cards-grid">
+          <a href="#services" class="hero-mini-card glass-card">
+            <div class="mini-card-icon">🚀</div>
+            <div class="mini-card-text">
+              <h4>Web Development</h4>
+              <p>High-converting & fast</p>
+            </div>
+            <span class="mini-card-badge">Instant</span>
+          </a>
+
+          <a href="#services" class="hero-mini-card glass-card">
+            <div class="mini-card-icon">🛡️</div>
+            <div class="mini-card-text">
+              <h4>Premium Hosting</h4>
+              <p>99.99% Uptime SLA</p>
+            </div>
+            <span class="mini-card-badge badge-green">99.99%</span>
+          </a>
+
+          <a href="#services" class="hero-mini-card glass-card">
+            <div class="mini-card-icon">⚡</div>
+            <div class="mini-card-text">
+              <h4>VPS Servers</h4>
+              <p>NVMe speed & full root</p>
+            </div>
+            <span class="mini-card-badge">Scalable</span>
+          </a>
+
+          <a href="#services" class="hero-mini-card glass-card">
+            <div class="mini-card-icon">🤖</div>
+            <div class="mini-card-text">
+              <h4>Bot Hosting</h4>
+              <p>Discord & AI bots 24/7</p>
+            </div>
+            <span class="mini-card-badge badge-purple">Always On</span>
+          </a>
+
+          <a href="#services" class="hero-mini-card glass-card">
+            <div class="mini-card-icon">💻</div>
+            <div class="mini-card-text">
+              <h4>Software Dev</h4>
+              <p>Custom web & mobile apps</p>
+            </div>
+            <span class="mini-card-badge">Tailored</span>
+          </a>
+
+          <a href="#services" class="hero-mini-card glass-card">
+            <div class="mini-card-icon">📈</div>
+            <div class="mini-card-text">
+              <h4>SEO & Growth</h4>
+              <p>Rank #1 on Google</p>
+            </div>
+            <span class="mini-card-badge badge-cyan">+300%</span>
+          </a>
+        </div>
+        <div class="showcase-footer">
+          <span>Need custom setup? We handle everything from zero to launch.</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="scroll-indicator" aria-hidden="true">
+      <div class="scroll-dot"></div>
+    </div>
+  </section>
+
+  <!-- ============================================================ MARQUEE ============================================================ -->
+  <div class="marquee-section" aria-hidden="true">
+    <div class="marquee-track">
+      <div class="marquee-inner">
+        <span>⚡ 99.99% Uptime Guarantee</span>
+        <span class="marquee-sep">✦</span>
+        <span>🚀 Blazing-Fast Websites</span>
+        <span class="marquee-sep">✦</span>
+        <span>🛡️ Enterprise-Grade Security</span>
+        <span class="marquee-sep">✦</span>
+        <span>🤖 Smart Bot Development</span>
+        <span class="marquee-sep">✦</span>
+        <span>📈 SEO-Optimized by Default</span>
+        <span class="marquee-sep">✦</span>
+        <span>🌍 Global CDN Coverage</span>
+        <span class="marquee-sep">✦</span>
+        <span>💻 Custom Software Solutions</span>
+        <span class="marquee-sep">✦</span>
+        <span>☁️ Scalable VPS Hosting</span>
+        <span class="marquee-sep">✦</span>
+        <span>⚡ 99.99% Uptime Guarantee</span>
+        <span class="marquee-sep">✦</span>
+        <span>🚀 Blazing-Fast Websites</span>
+        <span class="marquee-sep">✦</span>
+        <span>🛡️ Enterprise-Grade Security</span>
+        <span class="marquee-sep">✦</span>
+        <span>🤖 Smart Bot Development</span>
+        <span class="marquee-sep">✦</span>
+        <span>📈 SEO-Optimized by Default</span>
+        <span class="marquee-sep">✦</span>
+        <span>🌍 Global CDN Coverage</span>
+        <span class="marquee-sep">✦</span>
+        <span>💻 Custom Software Solutions</span>
+        <span class="marquee-sep">✦</span>
+        <span>☁️ Scalable VPS Hosting</span>
+        <span class="marquee-sep">✦</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================================ SERVICES ============================================================ -->
+  <section class="services" id="services" aria-labelledby="services-heading">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-badge">What We Do</div>
+        <h2 id="services-heading" class="section-title">Everything You Need,<br /><span class="gradient-text">Under One Roof</span></h2>
+        <p class="section-desc">Forget juggling ten different vendors. StingCloud handles it all — so you can focus on what matters: growing your business.</p>
+      </div>
+
+      <div class="services-grid">
+
+        <article class="service-card" data-tilt id="svc-web">
+          <div class="card-glow"></div>
+          <div class="service-icon-wrap">
+            <div class="service-icon">
+              <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect x="4" y="8" width="40" height="28" rx="3" fill="url(#g1)" opacity="0.15"/><rect x="4" y="8" width="40" height="28" rx="3" stroke="url(#g1)" stroke-width="2"/><circle cx="12" cy="16" r="2" fill="#38bdf8"/><circle cx="19" cy="16" r="2" fill="#7c3aed"/><circle cx="26" cy="16" r="2" fill="#10b981"/><path d="M4 22h40" stroke="url(#g1)" stroke-width="1.5"/><path d="M20 36v4M14 40h20" stroke="url(#g1)" stroke-width="2" stroke-linecap="round"/><defs><linearGradient id="g1" x1="4" y1="8" x2="44" y2="36" gradientUnits="userSpaceOnUse"><stop stop-color="#38bdf8"/><stop offset="1" stop-color="#7c3aed"/></linearGradient></defs></svg>
+            </div>
+          </div>
+          <h3 class="service-title">Web Development</h3>
+          <p class="service-desc">Beautiful, fast, and conversion-optimized websites. From landing pages to full e-commerce platforms — built to win customers.</p>
+          <ul class="service-features" aria-label="Web development features">
+            <li>Lightning-fast load times</li>
+            <li>Mobile-first responsive design</li>
+            <li>SEO built-in from day one</li>
+            <li>CMS integration (edit yourself)</li>
+          </ul>
+          <div class="service-footer">
+            <a href="#contact" class="service-link" aria-label="Get started with web development">Get Started →</a>
+          </div>
+        </article>
+
+        <article class="service-card service-card-featured" data-tilt id="svc-hosting">
+          <div class="card-glow card-glow-featured"></div>
+          <div class="featured-badge">Most Popular</div>
+          <div class="service-icon-wrap">
+            <div class="service-icon">
+              <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect x="8" y="14" width="32" height="8" rx="2" fill="url(#g2)" opacity="0.15"/><rect x="8" y="14" width="32" height="8" rx="2" stroke="url(#g2)" stroke-width="2"/><rect x="8" y="26" width="32" height="8" rx="2" fill="url(#g2)" opacity="0.15"/><rect x="8" y="26" width="32" height="8" rx="2" stroke="url(#g2)" stroke-width="2"/><circle cx="36" cy="18" r="2" fill="#10b981"/><circle cx="36" cy="30" r="2" fill="#10b981"/><path d="M12 18h12M12 30h8" stroke="url(#g2)" stroke-width="1.5" stroke-linecap="round"/><defs><linearGradient id="g2" x1="8" y1="14" x2="40" y2="34" gradientUnits="userSpaceOnUse"><stop stop-color="#38bdf8"/><stop offset="1" stop-color="#7c3aed"/></linearGradient></defs></svg>
+            </div>
+          </div>
+          <h3 class="service-title">Premium Hosting</h3>
+          <p class="service-desc">Your website, always online. Our enterprise-grade infrastructure means your visitors never see a "Site Down" page.</p>
+          <ul class="service-features" aria-label="Hosting features">
+            <li>99.99% uptime SLA guarantee</li>
+            <li>Global CDN (200+ edge nodes)</li>
+            <li>Free SSL + DDoS protection</li>
+            <li>Daily backups & 1-click restore</li>
+          </ul>
+          <div class="service-footer">
+            <a href="#contact" class="service-link" aria-label="Get started with hosting">Get Started →</a>
+          </div>
+        </article>
+
+        <article class="service-card" data-tilt id="svc-vps">
+          <div class="card-glow"></div>
+          <div class="service-icon-wrap">
+            <div class="service-icon">
+              <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect x="6" y="6" width="16" height="16" rx="2" fill="url(#g3)" opacity="0.15"/><rect x="6" y="6" width="16" height="16" rx="2" stroke="url(#g3)" stroke-width="2"/><rect x="26" y="6" width="16" height="16" rx="2" fill="url(#g3)" opacity="0.15"/><rect x="26" y="6" width="16" height="16" rx="2" stroke="url(#g3)" stroke-width="2"/><rect x="6" y="26" width="16" height="16" rx="2" fill="url(#g3)" opacity="0.15"/><rect x="6" y="26" width="16" height="16" rx="2" stroke="url(#g3)" stroke-width="2"/><rect x="26" y="26" width="16" height="16" rx="2" fill="url(#g3)" opacity="0.15"/><rect x="26" y="26" width="16" height="16" rx="2" stroke="url(#g3)" stroke-width="2"/><defs><linearGradient id="g3" x1="6" y1="6" x2="42" y2="42" gradientUnits="userSpaceOnUse"><stop stop-color="#38bdf8"/><stop offset="1" stop-color="#7c3aed"/></linearGradient></defs></svg>
+            </div>
+          </div>
+          <h3 class="service-title">VPS Hosting</h3>
+          <p class="service-desc">Dedicated power for demanding applications. Get your own virtual server with full control, incredible speed, and instant scalability.</p>
+          <ul class="service-features" aria-label="VPS hosting features">
+            <li>Dedicated CPU & RAM resources</li>
+            <li>Scale up in seconds</li>
+            <li>Root access & full control</li>
+            <li>NVMe SSD storage</li>
+          </ul>
+          <div class="service-footer">
+            <a href="#contact" class="service-link" aria-label="Get started with VPS hosting">Get Started →</a>
+          </div>
+        </article>
+
+        <article class="service-card" data-tilt id="svc-bot">
+          <div class="card-glow"></div>
+          <div class="service-icon-wrap">
+            <div class="service-icon">
+              <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect x="12" y="16" width="24" height="20" rx="4" fill="url(#g4)" opacity="0.15"/><rect x="12" y="16" width="24" height="20" rx="4" stroke="url(#g4)" stroke-width="2"/><circle cx="19" cy="24" r="2.5" fill="#38bdf8"/><circle cx="29" cy="24" r="2.5" fill="#7c3aed"/><path d="M19 31h10" stroke="url(#g4)" stroke-width="2" stroke-linecap="round"/><path d="M24 16v-5M20 11h8" stroke="url(#g4)" stroke-width="2" stroke-linecap="round"/><path d="M8 24h4M36 24h4" stroke="url(#g4)" stroke-width="2" stroke-linecap="round"/><defs><linearGradient id="g4" x1="8" y1="11" x2="40" y2="36" gradientUnits="userSpaceOnUse"><stop stop-color="#38bdf8"/><stop offset="1" stop-color="#7c3aed"/></linearGradient></defs></svg>
+            </div>
+          </div>
+          <h3 class="service-title">Bot Development & Hosting</h3>
+          <p class="service-desc">Automate your workflow with smart bots. Discord bots, Telegram bots, AI chatbots — we build, host, and keep them running 24/7.</p>
+          <ul class="service-features" aria-label="Bot development features">
+            <li>Custom bot logic built for you</li>
+            <li>Always-online bot hosting</li>
+            <li>Discord, Telegram, WhatsApp</li>
+            <li>AI-powered responses</li>
+          </ul>
+          <div class="service-footer">
+            <a href="#contact" class="service-link" aria-label="Get started with bot development">Get Started →</a>
+          </div>
+        </article>
+
+        <article class="service-card" data-tilt id="svc-software">
+          <div class="card-glow"></div>
+          <div class="service-icon-wrap">
+            <div class="service-icon">
+              <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M16 18l-8 6 8 6M32 18l8 6-8 6M26 12l-4 24" stroke="url(#g5)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><defs><linearGradient id="g5" x1="8" y1="12" x2="40" y2="36" gradientUnits="userSpaceOnUse"><stop stop-color="#38bdf8"/><stop offset="1" stop-color="#7c3aed"/></linearGradient></defs></svg>
+            </div>
+          </div>
+          <h3 class="service-title">Software Development</h3>
+          <p class="service-desc">Got a brilliant idea? We turn it into a real product. From MVPs to enterprise tools — we architect, build, and launch custom software.</p>
+          <ul class="service-features" aria-label="Software development features">
+            <li>Full-stack web & mobile apps</li>
+            <li>API design & integration</li>
+            <li>Agile delivery, fast iterations</li>
+            <li>Post-launch support included</li>
+          </ul>
+          <div class="service-footer">
+            <a href="#contact" class="service-link" aria-label="Get started with software development">Discuss Project →</a>
+          </div>
+        </article>
+
+        <article class="service-card" data-tilt id="svc-seo">
+          <div class="card-glow"></div>
+          <div class="service-icon-wrap">
+            <div class="service-icon">
+              <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="22" cy="22" r="12" stroke="url(#g6)" stroke-width="2"/><path d="M31 31l9 9" stroke="url(#g6)" stroke-width="2.5" stroke-linecap="round"/><path d="M16 22c0-3.314 2.686-6 6-6" stroke="#38bdf8" stroke-width="2" stroke-linecap="round"/><path d="M18 28h8M22 24h4" stroke="url(#g6)" stroke-width="2" stroke-linecap="round"/><defs><linearGradient id="g6" x1="8" y1="8" x2="40" y2="40" gradientUnits="userSpaceOnUse"><stop stop-color="#38bdf8"/><stop offset="1" stop-color="#7c3aed"/></linearGradient></defs></svg>
+            </div>
+          </div>
+          <h3 class="service-title">SEO & Digital Growth</h3>
+          <p class="service-desc">Show up where your customers search. We optimize your online presence so Google (and your customers) can always find you.</p>
+          <ul class="service-features" aria-label="SEO features">
+            <li>Technical SEO & site audits</li>
+            <li>On-page & off-page optimization</li>
+            <li>Core Web Vitals optimization</li>
+            <li>Monthly ranking reports</li>
+          </ul>
+          <div class="service-footer">
+            <a href="#contact" class="service-link" aria-label="Get started with SEO">Get Started →</a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ WHY US ============================================================ -->
+  <section class="why-us" id="why-us" aria-labelledby="why-heading">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-badge">Why StingCloud</div>
+        <h2 id="why-heading" class="section-title">The Difference You'll<br /><span class="gradient-text">Actually Feel</span></h2>
+        <p class="section-desc">We don't just deliver services — we deliver outcomes. Here's what sets us apart from every other provider.</p>
+      </div>
+
+      <div class="why-grid">
+        <div class="why-left">
+          <div class="why-feature" id="wf1">
+            <div class="why-icon" aria-hidden="true">⚡</div>
+            <div class="why-content">
+              <h3>99.99% Uptime — Guaranteed</h3>
+              <p>Your website is always live. Our infrastructure monitors every millisecond and auto-heals before you even notice an issue.</p>
+            </div>
+          </div>
+          <div class="why-feature" id="wf2">
+            <div class="why-icon" aria-hidden="true">🚀</div>
+            <div class="why-content">
+              <h3>Speed That Converts</h3>
+              <p>We engineer every site to load under 2 seconds globally. Because a 1-second delay costs you 7% of conversions.</p>
+            </div>
+          </div>
+          <div class="why-feature" id="wf3">
+            <div class="why-icon" aria-hidden="true">🛡️</div>
+            <div class="why-content">
+              <h3>Security-First Architecture</h3>
+              <p>SSL, DDoS protection, firewalls, and daily backups are standard — not add-ons. Your data is always safe with us.</p>
+            </div>
+          </div>
+          <div class="why-feature" id="wf4">
+            <div class="why-icon" aria-hidden="true">🎯</div>
+            <div class="why-content">
+              <h3>Built for Your Goals, Not Ours</h3>
+              <p>No bloated tech stack. No unnecessary complexity. We build exactly what gets results for your specific business.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="why-center" aria-hidden="true">
+          <div class="stats-ring">
+            <div class="ring-outer">
+              <div class="ring-inner">
+                <div class="ring-content">
+                  <div class="ring-stat">
+                    <span class="ring-number" data-target="99.99">0</span>
+                    <span class="ring-unit">%</span>
+                  </div>
+                  <div class="ring-label">Uptime</div>
+                </div>
+              </div>
+            </div>
+            <div class="ring-orbit orbit-1">
+              <div class="orbit-dot dot-web">🌐</div>
+            </div>
+            <div class="ring-orbit orbit-2">
+              <div class="orbit-dot dot-shield">🛡️</div>
+            </div>
+            <div class="ring-orbit orbit-3">
+              <div class="orbit-dot dot-speed">⚡</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="why-right">
+          <div class="why-feature" id="wf5">
+            <div class="why-icon" aria-hidden="true">🌍</div>
+            <div class="why-content">
+              <h3>Global CDN — Worldwide Fast</h3>
+              <p>Content served from 200+ locations around the globe. Whether your visitors are in Mumbai or Miami, they get the same blazing speed.</p>
+            </div>
+          </div>
+          <div class="why-feature" id="wf6">
+            <div class="why-icon" aria-hidden="true">📈</div>
+            <div class="why-content">
+              <h3>SEO-Optimized by Default</h3>
+              <p>Every website we build passes Google Core Web Vitals. Your digital foundation is already search-engine ready from launch day.</p>
+            </div>
+          </div>
+          <div class="why-feature" id="wf7">
+            <div class="why-icon" aria-hidden="true">💬</div>
+            <div class="why-content">
+              <h3>Real Humans, Real Support</h3>
+              <p>24/7 live chat and email support. No bots, no hold music, no tickets disappearing into voids. Just fast, friendly help.</p>
+            </div>
+          </div>
+          <div class="why-feature" id="wf8">
+            <div class="why-icon" aria-hidden="true">🔧</div>
+            <div class="why-content">
+              <h3>One Partner for Everything</h3>
+              <p>Web, hosting, VPS, bots, apps — one team, one invoice, one point of contact. Say goodbye to vendor chaos.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ PROCESS ============================================================ -->
+
+  <!-- ============================================================ PROCESS ============================================================ -->
+  <section class="process" id="process" aria-labelledby="process-heading">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-badge">How It Works</div>
+        <h2 id="process-heading" class="section-title">Go Live in <span class="gradient-text">4 Simple Steps</span></h2>
+        <p class="section-desc">From idea to online — no technical knowledge required. We make it effortless.</p>
+      </div>
+
+      <div class="process-track">
+        <div class="process-line" aria-hidden="true"></div>
+
+        <div class="process-step" id="step1">
+          <div class="step-number" aria-hidden="true">01</div>
+          <div class="step-card glass-card">
+            <div class="step-icon" aria-hidden="true">💬</div>
+            <h3>Tell Us Your Vision</h3>
+            <p>Fill out our simple form or hop on a quick call. No jargon, no tech-talk — just tell us what you want to achieve.</p>
+          </div>
+        </div>
+
+        <div class="process-step" id="step2">
+          <div class="step-number" aria-hidden="true">02</div>
+          <div class="step-card glass-card">
+            <div class="step-icon" aria-hidden="true">🎨</div>
+            <h3>We Design & Plan</h3>
+            <p>Our team crafts a custom plan and design mockup, tailored to your brand and goals. You review and approve — changes are free.</p>
+          </div>
+        </div>
+
+        <div class="process-step" id="step3">
+          <div class="step-number" aria-hidden="true">03</div>
+          <div class="step-card glass-card">
+            <div class="step-icon" aria-hidden="true">⚙️</div>
+            <h3>We Build & Test</h3>
+            <p>Our engineers build and rigorously test everything. Performance, security, mobile — it all gets checked before anything goes live.</p>
+          </div>
+        </div>
+
+        <div class="process-step" id="step4">
+          <div class="step-number" aria-hidden="true">04</div>
+          <div class="step-card glass-card">
+            <div class="step-icon" aria-hidden="true">🚀</div>
+            <h3>Launch & Grow</h3>
+            <p>Your project goes live! And we don't disappear after launch — ongoing support, SEO monitoring, and updates are part of the deal.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ COUNTER STRIP ============================================================ -->
+  <section class="counter-strip" aria-labelledby="counters-heading">
+    <h2 id="counters-heading" class="visually-hidden">StingCloud by the numbers</h2>
+    <div class="container">
+      <div class="counters-grid">
+        <div class="counter-item">
+          <span class="counter-num" data-target="100" aria-live="polite">0</span><span class="counter-suffix">%</span>
+          <span class="counter-label">Custom Built &amp; Managed</span>
+        </div>
+        <div class="counter-item">
+          <span class="counter-num" data-target="99" aria-live="polite">0</span><span class="counter-suffix">.99%</span>
+          <span class="counter-label">Average Uptime</span>
+        </div>
+        <div class="counter-item">
+          <span class="counter-num" data-target="48" aria-live="polite">0</span><span class="counter-suffix">hr</span>
+          <span class="counter-label">Average Turnaround</span>
+        </div>
+        <div class="counter-item">
+          <span class="counter-num" data-target="200" aria-live="polite">0</span><span class="counter-suffix">+</span>
+          <span class="counter-label">CDN Locations</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ CONTACT ============================================================ -->
+  <section class="contact" id="contact" aria-labelledby="contact-heading">
+    <div class="container">
+      <div class="contact-grid">
+        <div class="contact-info">
+          <div class="section-badge">Let's Talk</div>
+          <h2 id="contact-heading" class="section-title">Ready to Build<br /><span class="gradient-text">Something Great?</span></h2>
+          <p class="section-desc">Tell us about your project and we'll get back to you within 24 hours with a plan and a quote. No pressure, no hard sell.</p>
+
+          <div class="contact-details">
+            <div class="contact-detail">
+              <div class="contact-detail-icon" aria-hidden="true">📧</div>
+              <div>
+                <strong>Email Us</strong>
+                <a href="mailto:hello@stingcloud.in">hello@stingcloud.in</a>
+              </div>
+            </div>
+            <div class="contact-detail">
+              <div class="contact-detail-icon" aria-hidden="true">💬</div>
+              <div>
+                <strong>Live Chat</strong>
+                <span>Available 24/7 on the site</span>
+              </div>
+            </div>
+            <div class="contact-detail">
+              <div class="contact-detail-icon" aria-hidden="true">⏱️</div>
+              <div>
+                <strong>Response Time</strong>
+                <span>Under 24 hours, guaranteed</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-socials" aria-label="Social media links">
+            <a href="#" class="social-btn" aria-label="StingCloud on Twitter">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+            <a href="#" class="social-btn" aria-label="StingCloud on Instagram">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+            </a>
+            <a href="#" class="social-btn" aria-label="StingCloud on LinkedIn">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="contact-form-wrap">
+          <form class="contact-form glass-card" id="contactForm" action="https://formspree.io/f/xjyvkqvl" method="POST" novalidate aria-labelledby="contact-heading">
+            <h3 class="form-title">Start Your Project</h3>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="fname">First Name <span aria-hidden="true">*</span></label>
+                <input type="text" id="fname" name="fname" placeholder="Arjun" required autocomplete="given-name" />
+              </div>
+              <div class="form-group">
+                <label for="lname">Last Name <span aria-hidden="true">*</span></label>
+                <input type="text" id="lname" name="lname" placeholder="Sharma" required autocomplete="family-name" />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email Address <span aria-hidden="true">*</span></label>
+              <input type="email" id="email" name="email" placeholder="you@company.com" required autocomplete="email" />
+            </div>
+
+            <div class="form-group">
+              <label for="phone">Phone Number</label>
+              <input type="tel" id="phone" name="phone" placeholder="+91 98765 43210" autocomplete="tel" />
+            </div>
+
+            <div class="form-group">
+              <label for="service">Service Needed <span aria-hidden="true">*</span></label>
+              <select id="service" name="service" required>
+                <option value="" disabled selected>Select a service…</option>
+                <option value="web-dev">Web Development</option>
+                <option value="hosting">Web Hosting</option>
+                <option value="vps">VPS Hosting</option>
+                <option value="bot">Bot Development &amp; Hosting</option>
+                <option value="software">Software Development</option>
+                <option value="seo">SEO &amp; Digital Growth</option>
+                <option value="other">Other / Not Sure</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="budget">Estimated Budget</label>
+              <select id="budget" name="budget">
+                <option value="" disabled selected>Select a range…</option>
+                <option value="under5k">Under ₹5,000/mo</option>
+                <option value="5k-15k">₹5,000 – ₹15,000/mo</option>
+                <option value="15k-50k">₹15,000 – ₹50,000/mo</option>
+                <option value="50k+">₹50,000+/mo</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="message">Tell Us About Your Project <span aria-hidden="true">*</span></label>
+              <textarea id="message" name="message" placeholder="Describe what you want to build or improve. Don't worry about being technical — just tell us your goals!" rows="4" required></textarea>
+            </div>
+
+            <button type="submit" class="btn-primary btn-full" id="formSubmitBtn" aria-live="polite">
+              <span id="btnText">Send My Request ⚡</span>
+            </button>
+
+            <div class="form-note" role="status" aria-live="polite" id="formStatus"></div>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ CTA BANNER ============================================================ -->
+  <section class="cta-banner" aria-labelledby="cta-heading">
+    <div class="cta-bg" aria-hidden="true">
+      <div class="cta-orb"></div>
+    </div>
+    <div class="container">
+      <div class="cta-content">
+        <h2 id="cta-heading" class="cta-title">Your Idea Deserves<br /><span class="gradient-text">World-Class Execution.</span></h2>
+        <p class="cta-desc">Choose StingCloud to power your entire digital future. Let's build something extraordinary — together.</p>
+        <div class="cta-actions">
+          <a href="#contact" class="btn-primary" id="ctaBuildBtn" aria-label="Build with StingCloud">
+            <span>Build Now</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          <a href="#contact" class="btn-ghost-light" aria-label="Contact StingCloud">Talk to Us</a>
+        </div>
+        <div class="cta-guarantee">
+          <span>✅ 30-day money-back guarantee</span>
+          <span>🔒 No lock-in contracts</span>
+          <span>⚡ Cancel anytime</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ FOOTER ============================================================ -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="#home" class="nav-logo" aria-label="StingCloud Home">
+            <div class="logo-icon">
+              <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M32 16c0-6.627-5.373-12-12-12S8 9.373 8 16c-3.314 0-6 2.686-6 6s2.686 6 6 6h24c3.314 0 6-2.686 6-6s-2.686-6-6-6z" fill="url(#fcloud)"/>
+                <path d="M22 14l-6 10h5l-2 8 8-12h-5l2-6z" fill="url(#fbolt)"/>
+                <defs>
+                  <linearGradient id="fcloud" x1="2" y1="4" x2="38" y2="28" gradientUnits="userSpaceOnUse"><stop stop-color="#38bdf8"/><stop offset="1" stop-color="#7c3aed"/></linearGradient>
+                  <linearGradient id="fbolt" x1="14" y1="14" x2="24" y2="32" gradientUnits="userSpaceOnUse"><stop stop-color="#ffffff"/><stop offset="1" stop-color="#bfdbfe"/></linearGradient>
+                </defs>
+              </svg>
+            </div>
+            <span class="logo-text">Sting<span class="logo-accent">Cloud</span></span>
+          </a>
+          <p class="footer-tagline">Your one-stop digital power house. Web dev, hosting, VPS, bots, software — all under one roof.</p>
+          <div class="footer-socials" aria-label="Social media links">
+            <a href="#" class="social-btn" aria-label="StingCloud on Twitter">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+            <a href="#" class="social-btn" aria-label="StingCloud on Instagram">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+            </a>
+            <a href="#" class="social-btn" aria-label="StingCloud on LinkedIn">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-col-title">Services</h4>
+          <ul class="footer-links" role="list">
+            <li><a href="#services">Web Development</a></li>
+            <li><a href="#services">Web Hosting</a></li>
+            <li><a href="#services">VPS Hosting</a></li>
+            <li><a href="#services">Bot Development</a></li>
+            <li><a href="#services">Software Development</a></li>
+            <li><a href="#services">SEO &amp; Growth</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-col-title">Company</h4>
+          <ul class="footer-links" role="list">
+            <li><a href="#why-us">About Us</a></li>
+            <li><a href="#process">How It Works</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#">Blog</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-col-title">Legal</h4>
+          <ul class="footer-links" role="list">
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Service</a></li>
+            <li><a href="#">Refund Policy</a></li>
+            <li><a href="#">SLA Agreement</a></li>
+            <li><a href="#">Cookie Policy</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© <span id="footerYear">2024</span> StingCloud. All rights reserved. Built with ⚡ in India.</p>
+        <div class="footer-bottom-right">
+          <div class="uptime-indicator" role="status" aria-label="System status: all operational">
+            <span class="uptime-dot" aria-hidden="true"></span>
+            All Systems Operational
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
