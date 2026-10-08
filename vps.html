@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VPS Cloud Servers — StingCloud Interactive 3D Experience</title>
+  <meta name="description" content="Explore StingCloud VPS servers in an interactive 3D experience. Open the chassis, discover high-performance components, and see why our infrastructure is unmatched." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="vps-style.css" />
+
+</head>
+<body>
+
+  <!-- ══════════ NAV ══════════ -->
+  <nav class="vps-nav" id="vpsNav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo" aria-label="StingCloud Home">
+        <div class="logo-icon">
+          <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M32 16c0-6.627-5.373-12-12-12S8 9.373 8 16c-3.314 0-6 2.686-6 6s2.686 6 6 6h24c3.314 0 6-2.686 6-6s-2.686-6-6-6z" fill="url(#cg)"/>
+            <path d="M22 14l-6 10h5l-2 8 8-12h-5l2-6z" fill="url(#bg)"/>
+            <defs>
+              <linearGradient id="cg" x1="2" y1="4" x2="38" y2="28" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#38bdf8"/><stop offset="1" stop-color="#7c3aed"/>
+              </linearGradient>
+              <linearGradient id="bg" x1="14" y1="14" x2="24" y2="32" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#ffffff"/><stop offset="1" stop-color="#bfdbfe"/>
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+        <span class="logo-text">Sting<span class="logo-accent">Cloud</span></span>
+      </a>
+
+      <div class="nav-right">
+        <a href="index.html" class="nav-link">← Back to Home</a>
+        <a href="index.html#contact" class="nav-cta">Get VPS ⚡</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ══════════ 3D CANVAS CONTAINER ══════════ -->
+  <main class="vps-experience" id="vpsExperience">
+
+    <!-- Three.js Canvas -->
+    <canvas id="vpsCanvas" aria-label="Interactive 3D VPS Server Model"></canvas>
+
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loadingScreen">
+      <div class="loader-content">
+        <div class="loader-spinner"></div>
+        <p class="loader-text">Initializing VPS Environment…</p>
+      </div>
+    </div>
+
+    <!-- Hero Overlay (visible in IDLE state) -->
+    <div class="hero-overlay" id="heroOverlay">
+      <div class="hero-content">
+        <div class="hero-badge">Interactive 3D Experience</div>
+        <h1 class="hero-title">VPS Cloud <span class="gradient-text">Servers</span></h1>
+        <p class="hero-desc">Explore our high-performance VPS infrastructure from the inside. Open the chassis, inspect every component, and see why StingCloud delivers unmatched reliability.</p>
+        <div class="hero-actions">
+          <button class="btn-explore" id="btnExplore">
+            <span class="btn-icon">🔍</span>
+            <span>Open & Explore</span>
+          </button>
+          <button class="btn-rotate" id="btnRotate">
+            <span class="btn-icon">↻</span>
+            <span>Auto Rotate</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Component Info Panel (visible when a component is focused) -->
+    <div class="info-panel" id="infoPanel">
+      <button class="info-close" id="infoClose" aria-label="Close info panel">✕</button>
+      <div class="info-icon" id="infoIcon"></div>
+      <h2 class="info-title" id="infoTitle">Component</h2>
+      <p class="info-desc" id="infoDesc">Description</p>
+      <div class="info-specs" id="infoSpecs"></div>
+    </div>
+
+    <!-- Control Bar (visible in OPEN state) -->
+    <div class="control-bar" id="controlBar">
+      <button class="ctrl-btn" id="btnReset" title="Close server">
+        <span>✕</span> Close
+      </button>
+      <div class="ctrl-hint">Click a glowing component to learn more</div>
+    </div>
+
+    <!-- Component Labels (positioned via JS) -->
+    <div class="labels-container" id="labelsContainer"></div>
+
+  </main>
+
+  <!-- ══════════ SPECS GRID (below 3D) ══════════ -->
+  <section class="specs-section" id="specsSection">
+    <div class="specs-container">
+      <div class="section-header">
+        <div class="section-badge">Technical Specifications</div>
+        <h2 class="section-title">Enterprise-Grade <span class="gradient-text">Hardware</span></h2>
+        <p class="section-desc">Every VPS runs on the latest server-class hardware, meticulously selected for maximum performance and reliability.</p>
+      </div>
+
+      <div class="specs-grid">
+        <div class="spec-card">
+          <div class="spec-icon">⚡</div>
+          <h3>AMD EPYC™ vCPUs</h3>
+          <p>Up to 32 dedicated vCPU cores with Zen 4 architecture. 5.0GHz boost clock for burst workloads.</p>
+          <div class="spec-tag">Up to 32 Cores</div>
+        </div>
+        <div class="spec-card">
+          <div class="spec-icon">🧠</div>
+          <h3>DDR5 ECC Memory</h3>
+          <p>Error-correcting DDR5 RAM ensures zero data corruption. Scale from 4GB to 128GB per instance.</p>
+          <div class="spec-tag">Up to 128GB</div>
+        </div>
+        <div class="spec-card">
+          <div class="spec-icon">💾</div>
+          <h3>NVMe Gen4 SSDs</h3>
+          <p>7,000 MB/s sequential read speeds. Enterprise-grade drives with power-loss protection and RAID-10.</p>
+          <div class="spec-tag">Up to 2TB</div>
+        </div>
+        <div class="spec-card">
+          <div class="spec-icon">🌐</div>
+          <h3>10Gbps Network</h3>
+          <p>Dual-redundant 10Gbps uplinks with DDoS mitigation. Unlimited bandwidth on all plans.</p>
+          <div class="spec-tag">Unlimited BW</div>
+        </div>
+        <div class="spec-card">
+          <div class="spec-icon">🔋</div>
+          <h3>Redundant Power</h3>
+          <p>Dual PSU with automatic failover. Tier-4 datacenter with 72hr UPS and diesel backup.</p>
+          <div class="spec-tag">99.99% Uptime</div>
+        </div>
+        <div class="spec-card">
+          <div class="spec-icon">🛡️</div>
+          <h3>Security First</h3>
+          <p>Hardware-level encryption, isolated networking, automated snapshots, and firewall included.</p>
+          <div class="spec-tag">Enterprise Grade</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ CTA ══════════ -->
+  <section class="vps-cta">
+    <div class="cta-container">
+      <h2>Ready to Deploy Your <span class="gradient-text">VPS Server</span>?</h2>
+      <p>Tell us your requirements and we'll configure the perfect server for your workload.</p>
+      <a href="index.html#contact" class="btn-primary">Get Started ⚡</a>
+    </div>
+  </section>
+
+  <!-- ══════════ FOOTER ══════════ -->
+  <footer class="vps-footer">
+    <p>© <span id="footerYear">2026</span> StingCloud. All rights reserved. Built with ⚡ in India.</p>
+  </footer>
+
+  <!-- 3D Application Bundle (Self-contained, works offline & on file://) -->
+  <script src="vps-bundle.js"></script>
+  <script>
+    // Safety fallback: ensure loading overlay hides
+    setTimeout(function() {
+      var ls = document.getElementById('loadingScreen');
+      if (ls && !ls.classList.contains('hidden')) {
+        ls.classList.add('hidden');
+      }
+    }, 2000);
+  </script>
+</body>
+</html>

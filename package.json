@@ -1,0 +1,10 @@
+{
+  "name": "stingcloud",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "npx esbuild vps-app.js --bundle --minify --outfile=vps-bundle.js"
+  },
+  "dependencies": {
+    "three": "^0.186.1"
+  }
+}
